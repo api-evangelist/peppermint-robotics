@@ -1,26 +1,70 @@
 aid: peppermint-robotics
+
 name: Peppermint Robotics
-description: 'Peppermint Robotics is a company surfaced via the API Evangelist harvest backlog (source:
-  vc-portfolio; backed by crane-venture-partners) and added to the network as a stub for full-pipeline
-  profiling.'
+
+description: 'Peppermint Robotics designs and manufactures advanced robotic platforms for industrial automation and logistics. Founded in 2020, the company focuses on modular, AI‑driven robots that can be easily integrated into existing workflows, offering real‑time monitoring, remote control, and scalable solutions for warehouses, factories, and distribution centers. Their flagship product, the MintBot, combines precision navigation with customizable payload options, enabling clients to improve efficiency, reduce labor costs, and enhance safety across operations. Peppermint Robotics continues to innovate with cloud‑connected services, open APIs, and a growing ecosystem of third‑party integrations.'
+
 url: https://raw.githubusercontent.com/api-evangelist/peppermint-robotics/refs/heads/main/apis.yml
+
+image: https://cdn.prod.website-files.com/66683173b040d2d54b46af65/675a6adcd3e1a5701674b97a_peppermint_robotics_v3.png
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-24'
+
 modified: '2026-10-24'
+
 tags:
 - Company
-apis: []
+- Robotics
+- Automation
+- AI
+- Logistics
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- crane-venture-partners
+
 common:
+- type: Hosts
+  url: hosts/peppermint-robotics-hosts.yml
+- type: Vendors
+  url: vendors/peppermint-robotics-vendors.yml
+- type: PrivacyPolicy
+  url: https://www.peppermintrobotics.com/europe/privacy-policy
+- type: DomainSecurity
+  url: security/peppermint-robotics-domain-security.yml
 - type: Website
   url: https://www.peppermintrobotics.com/europe
+
+apis: []
+
+x-backed-by:
+- crane-venture-partners
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-24'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://www.peppermintrobotics.com/europe
+    status: 200
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 7
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
